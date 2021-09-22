@@ -41,13 +41,13 @@ def log_time(func):
    # return the_output
 # Si le programme ne fonctionne pas, mettre la ligne 16 à 19 en commentaire, j'ai ajouter cette ligne pour un peu plus d'interaction et mettre le site en dark    
 st.title('Dashboard pour les deux dataset')
-@st.cache(allow_output_mutation=True)
+@st.cache(suppress_st_warning=True, allow_output_mutation=True)
 @log_time
 def read_(chemin):
     dataset=pd.read_csv(chemin)
     return dataset
 
-@st.cache(allow_output_mutation=True)  
+@st.cache(suppress_st_warning=True, allow_output_mutation=True)
 @log_time  
 def read1_(chemin):
 
