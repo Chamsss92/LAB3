@@ -54,8 +54,8 @@ def read1_(chemin):
     dataset1=pd.read_csv(chemin)
     return dataset1
 
-data = read_('C:/Users/chams/Downloads/Data_Viz/ny-trips-data.csv')
-df = read1_('C:/Users/chams/Downloads/Data_Viz/uber-raw-data-apr14.csv')
+data = read_('ny-trips-data.csv')
+df = read1_('uber-raw-data-apr14.csv')
 
 
 
@@ -92,8 +92,8 @@ databar = pd.DataFrame(data[:], columns = ["Date/Time","Lat","Lon"])
 #@st.cache(suppress_st_warning=True)
 @log_time
 def option(arg):
-    data = read_('C:/Users/chams/Downloads/Data_Viz/ny-trips-data.csv')
-    df = read1_('C:/Users/chams/Downloads/Data_Viz/uber-raw-data-apr14.csv')
+    data = read_('ny-trips-data.csv')
+    df = read1_('uber-raw-data-apr14.csv')
 
     option = st.sidebar.selectbox(arg,choice)
 
